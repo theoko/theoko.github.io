@@ -1,187 +1,42 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Theodore Konstantopoulos Blog. Ongoing projects and ideas for the tSearch search engine.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Theodore Konstantopoulos</title>
+</head>
 
-    <meta name="mobile-web-app-capable" content="yes">
-<!--     <link rel="icon" sizes="192x192" href="images/android-desktop.png"> -->
+<body>
 
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
-
-<!--     <link rel="shortcut icon" href="images/favicon.png"> -->
-
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.deep_purple-pink.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-    </style>
-  </head>
-  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+    <nav>
+        <div class="nav-wrapper orange darken-2">
+            <a href="#" class="brand-logo">Theodore Konstantopoulos</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
         </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3>Theodore Konstantopoulos Projects Blog</h3>
-        </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-          <a href="#overview" class="mdl-layout__tab is-active">Projects Overview</a>
-          <a href="#features" class="mdl-layout__tab">tSearch Search Engine</a>
-          <a href="#about" class="mdl-layout__tab">About</a>
-        </div>
-      </header>
-      <main class="mdl-layout__content">
-        <div class="mdl-layout__tab-panel is-active" id="overview">
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                <h4 class="mdl-cell mdl-cell--12-col">Projects</h4>
-                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>tSearch</h5>
-                  My personal effort at a search engine. Developed in php (algorithms), with index and search using Elasticsearch, with an API included. <a href="https://tsearch.eu">Visit the website</a>.
-                </div>
-                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>PHPigeon</h5>
-                  A mass mail web application built with Laravel. <a href="https://github.com/theoko/PHPigeon">View code on github</a>.
-                </div>
-                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Chemistry Wizard</h5>
-                  Developed by me as part of tSearch, but essentially a fun side project with a Chemistry-mad friend. <a href="https://chem.tsearch.eu/">Visit the website</a>.
-                </div>
-              </div>
-              <div class="mdl-card__actions">
-                <a href="#" class="mdl-button">More Projects</a>
-              </div>
-            </div>
-          </section>
-        </div>
-        <div class="mdl-layout__tab-panel" id="features">
-          <section class="section--center mdl-grid mdl-grid--no-spacing">
-            <div class="mdl-cell mdl-cell--12-col">
-              <h4>tSearch Search Engine</h4>
-              My personal effort at a search engine. Developed in php (algorithms), Elasticsearch (database), with an API included.
-              <ul class="toc">
-                <h4>Table of Contents</h4>
-                <a href="#technology">Technology</a>
-                <a href="#algorithms">Writing the algorithms</a>
-                <a href="#smart-features">Smart features</a>
-                <a href="#possible-improvements">Possible improvements (TODO)</a>
-              </ul>
+    </nav>
 
-              <h5>Read <a href="https://theokonst.tk/tsearch-search-engine/how-tsearch-evolved/">this</a> article about tSearch at theokonst.tk</h5>
+    <div class="project" 
+        data-projectid="1" 
+        data-projectimage="images/tsearch_demo.png" 
+        data-projectdescription="tSearch"></div>
 
-              <h5 id="#technology">Technology</h5>
-              tSearch currently uses the following technologies:
-              <ul>
-                <li>Elasticsearch</li>
-                <li>MySQL (for smaller projects like the URL shortener)</li>
-              </ul>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="components/index.js"></script>
 
-              <p>
-                Elasticsearch stores tSearch's main index consisting of sites, images, videos and articles.
-              </p>
+</body>
 
-              <p>
-                MySQL is used for storing user accounts and for the site's platform
-              </p>
-              <h5 id="#algorithms">Algorithms</h5>
-              <p>
-                Basically, the most important program that the search engine uses is its crawler. The crawler includes many libraries as it produces smart info while processing large amounts of data.
-              </p>
-              <p>
-                Plugins for crawling providers such as: YouTube, Vimeo, ImDB etc. are used in order to produce "smart" info.
-              </p>
-
-              <h5 id="#smart-features">Smart Features</h5>
-              <p>
-                <ul>
-                  <li><a href="#smart-cards-details">Smart cards on results</a></li>
-                  <li><a href="#media-crawler-details">Media crawler</a></li>
-                </ul>
-              </p>
-
-              <h5 id="#possible-improvements">TODO</h5>
-                <ul>
-                  <li>AI - Artificial Intelligence search</li>
-                </ul>
-              <p>
-
-              </p>
-            </div>
-          </section>
-        </div>
-        <div class="mdl-layout__tab-panel" id="about">
-          <section class="section--center mdl-grid mdl-grid--no-spacing">
-            <div class="mdl-cell mdl-cell--12-col">
-              <h4>About</h4>
-
-              <p>Welcome to my projects blog. Here, you will find information about my ongoing programming projects.</p>
-            </div>
-          </section>
-        </div>
-        <footer class="mdl-mega-footer">
-          <div class="mdl-mega-footer--middle-section">
-            <div class="mdl-mega-footer--drop-down-section">
-              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-              <h1 class="mdl-mega-footer--heading">Useful Links</h1>
-              <ul class="mdl-mega-footer--link-list">
-                <li><a href="https://theokonst.tk">Personal blog</a></li>
-                <li><a href="https://tsearch.eu/">tSearch Search Engine</a></li>
-                <li><a href="https://chem.tsearch.eu/">Chemistry Wizard</a></li>
-                <li><a href="https://github.com/theoko/PHPigeon">PHPigeon on github</a></li>
-              </ul>
-            </div>
-            <div class="mdl-mega-footer--drop-down-section">
-              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-              <h1 class="mdl-mega-footer--heading">tSearch Projects</h1>
-              <ul class="mdl-mega-footer--link-list">
-                <li><a href="https://api.tsearch.eu/">tSearch API</a></li>
-                <li><a href="https://url.tsearch.eu/">tSearch URL Shortener</a></li>
-                <li><a href="http://tsearch.eu/about">tSearch Updates</a></li>
-              </ul>
-            </div>
-          </div>
-        </footer>
-      </main>
-    </div>
-    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-  </body>
 </html>
