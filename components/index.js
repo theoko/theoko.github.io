@@ -51,7 +51,20 @@ class Project extends React.Component {
                 {
                     className: 'col s8'
                 },
-                this.props.projectDescription
+                e(
+                    'h4',
+                    {
+
+                    },
+                    this.props.projectHeader
+                ),
+                e(
+                    'p',
+                    {
+
+                    },
+                    this.props.projectDescription
+                )
             )
         );
 
@@ -64,12 +77,15 @@ document.querySelectorAll('.project')
         // Read the project ID from a data-* attribute.
         const projectID = parseInt(domContainer.dataset.projectid, 10);
         const projectImage = domContainer.dataset.projectimage;
+
+        const projectHeader = domContainer.dataset.projectheader;
         const projectDescription = domContainer.dataset.projectdescription;
 
         ReactDOM.render(
             e(Project, {
                 projectID: projectID,
                 projectImage: projectImage,
+                projectHeader: projectHeader,
                 projectDescription: projectDescription
             }),
 
