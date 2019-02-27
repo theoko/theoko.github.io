@@ -59,6 +59,13 @@ class Project extends React.Component {
                     this.props.projectHeader
                 ),
                 e(
+                    'a',
+                    {
+                        href: this.props.projectGit
+                    },
+                    this.props.projectGit
+                ),
+                e(
                     'p',
                     {
 
@@ -79,6 +86,7 @@ document.querySelectorAll('.project')
         const projectImage = domContainer.dataset.projectimage;
 
         const projectHeader = domContainer.dataset.projectheader;
+        const projectGit = domContainer.dataset.projectgit;
         const projectDescription = domContainer.dataset.projectdescription;
 
         ReactDOM.render(
@@ -86,6 +94,7 @@ document.querySelectorAll('.project')
                 projectID: projectID,
                 projectImage: projectImage,
                 projectHeader: projectHeader,
+                projectGit: projectGit,
                 projectDescription: projectDescription
             }),
 
