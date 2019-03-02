@@ -11,6 +11,12 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -18,18 +24,20 @@
 </head>
 
 <body>
-
+  
     <div class="navbar"
         data-navbarid="1"
         data-name="Theodore Konstantopoulos">
         
         <div class="navEntry"
             data-url="/"
-            data-text="Portfolio"></div>
+            data-text="Portfolio"
+            data-icon="fas fa-suitcase"></div>
 
         <div class="navEntry"
             data-url="https://github.com/theoko"
-            data-text="Github"></div>
+            data-text="Github"
+            data-icon="fab fa-github"></div>
     </div>
 
     <div class="project" 
@@ -60,9 +68,6 @@
         data-projectgit="https://github.com/theoko/PDO_FUNCTIONS"
         data-projectdescription="A PHP library for constructing MySQL queries. The library uses PDO to open a connection to the database server and provides useful methods for getting (or selecting), filtering, inserting and updating data."></div>
 
-    <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> -->
-    
     <script src="./dist/main.js"></script>
 
 </body>

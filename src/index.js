@@ -9,6 +9,11 @@ import Project from "./components/projects/project";
 const e = React.createElement;
 
 // Build navigation
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+});
+
 document.querySelectorAll('.navbar')
     .forEach(domContainer => {
 
@@ -23,10 +28,12 @@ document.querySelectorAll('.navbar')
                 
                 const url = domContainer.dataset.url;
                 const name = domContainer.dataset.text;
+                const icon = domContainer.dataset.icon;
 
                 links.push({
                     url: url,
-                    name: name
+                    name: name,
+                    icon: icon
                 })
         });
 
