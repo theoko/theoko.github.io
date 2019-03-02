@@ -1,5 +1,7 @@
 'use strict';
 
+import React from "react";
+
 const e = React.createElement;
 
 export default class Project extends React.Component {

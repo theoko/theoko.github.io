@@ -1,5 +1,8 @@
 'use strict';
 
+import React from "react";
+import ReactDOM from "react-dom";
+
 import Navbar from "./components/nav/navbar";
 import Project from "./components/projects/project";
 
