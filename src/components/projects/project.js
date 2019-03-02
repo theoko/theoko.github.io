@@ -2,28 +2,13 @@
 
 const e = React.createElement;
 
-class Project extends React.Component {
+export default class Project extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { selected: false };
+        this.state = { selectedID: null };
     }
 
-    // renderProject = () => {
-
-    // }
-
     render() {
-
-        // if (this.state.selected) {
-        //     return 'Selected project ' + this.props.projectID;
-        // }
-
-        // var test = (
-        //     <div class="row"> 
-        //         <div class="col s4"><img src={this.props.projectImage} /></div>
-        //         <div class="col s8">2</div>
-        //     </div>
-        // ) 
 
         return e(
             'div',
@@ -77,28 +62,3 @@ class Project extends React.Component {
 
     }
 }
-
-document.querySelectorAll('.project')
-    .forEach(domContainer => {
-
-        // Read the project ID from a data-* attribute.
-        const projectID = parseInt(domContainer.dataset.projectid, 10);
-        const projectImage = domContainer.dataset.projectimage;
-
-        const projectHeader = domContainer.dataset.projectheader;
-        const projectGit = domContainer.dataset.projectgit;
-        const projectDescription = domContainer.dataset.projectdescription;
-
-        ReactDOM.render(
-            e(Project, {
-                projectID: projectID,
-                projectImage: projectImage,
-                projectHeader: projectHeader,
-                projectGit: projectGit,
-                projectDescription: projectDescription
-            }),
-
-            domContainer
-        );
-
-    });

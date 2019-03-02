@@ -19,14 +19,14 @@
 
 <body>
 
-    <nav>
-        <div class="nav-wrapper orange darken-2">
-            <a href="#" class="brand-logo">Theodore Konstantopoulos</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="portfolio.html">Portfolio</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="navbar"
+        data-navbarid="1"
+        data-name="Theodore Konstantopoulos">
+        
+        <div class="navEntry"
+            data-url="/"
+            data-text="Portfolio"></div>
+    </div>
 
     <div class="project" 
         data-projectid="1" 
@@ -44,6 +44,13 @@
 
     <div class="project" 
         data-projectid="3" 
+        data-projectimage="images/python_server_demo.png" 
+        data-projectheader="HTTP client & server written in Python 2.7"
+        data-projectgit="https://github.com/theoko/cs3516-project1"
+        data-projectdescription="This program uses the python socket library to create an HTTP server to serve the contents of a directory and listen for connections on the port specified."></div>
+
+    <div class="project" 
+        data-projectid="4" 
         data-projectimage="images/pdo_demo.png" 
         data-projectheader="PDO Helpers"
         data-projectgit="https://github.com/theoko/PDO_FUNCTIONS"
@@ -51,7 +58,8 @@
 
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-    <script src="components/index.js"></script>
+    
+    <script src="./dist/main.js"></script>
 
 </body>
 
