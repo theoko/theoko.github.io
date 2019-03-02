@@ -28,6 +28,22 @@ export default class Navbar extends React.Component {
 
     render() {
 
+        const navLinks = this.props.links.map(function(link) {
+            return e(
+                'li',
+                {
+    
+                },
+                e(
+                    'a',
+                    {
+                        href: link.url
+                    },
+                    link.name
+                )
+            )
+        })
+
         return e(
             'nav',
             {
@@ -54,21 +70,7 @@ export default class Navbar extends React.Component {
                         className: ['right' + ' hide-on-med-and-down']
                     },
 
-                    this.props.links.forEach(function(link) {
-                        e(
-                            'li',
-                            {
-                
-                            },
-                            e(
-                                'a',
-                                {
-                                    href: link.url
-                                },
-                                link.name
-                            )
-                        )
-                    })
+                    navLinks
                     
                 )
             )
