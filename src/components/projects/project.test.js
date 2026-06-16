@@ -45,12 +45,10 @@ describe('Project', () => {
     expect(ref.current.state.selectedID).toBeNull();
   });
 
-  it('updates state on click', () => {
+  it('sets selectedID to the project id on click', () => {
     const ref = React.createRef();
     const { container } = render(<Project ref={ref} {...baseProps} />);
     fireEvent.click(container.querySelector('.row'));
-    // The click handler sets `selected` (note: distinct from the
-    // `selectedID` initialized in the constructor).
-    expect(ref.current.state.selected).toBe(true);
+    expect(ref.current.state.selectedID).toBe(baseProps.projectID);
   });
 });

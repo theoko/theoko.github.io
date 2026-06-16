@@ -14,9 +14,9 @@ export default class Project extends React.Component {
 
         return e(
             'div',
-            { 
+            {
                 className: 'row',
-                onClick: () => this.setState({ selected: true }) 
+                onClick: () => this.setState({ selectedID: this.props.projectID })
             },
 
             e(

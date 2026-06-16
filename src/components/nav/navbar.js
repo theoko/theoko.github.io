@@ -12,11 +12,11 @@ export default class Navbar extends React.Component {
 
     render() {
 
-        const navLinks = this.props.links.map(function (link) {
+        const navLinks = this.props.links.map(function (link, index) {
             return e(
                 'li',
                 {
-
+                    key: index
                 },
                 e(
                     'a',
@@ -41,16 +41,14 @@ export default class Navbar extends React.Component {
         //   <li><a href="#!">Second Sidebar Link</a></li>
         // </ul>
 
-        const navLinksSlide = this.props.links.map(function (link) {
-            return e(
-                'ul',
-                {
-                    className: 'sidenav',
-                    id: 'slide-out'
-                },
-                navLinks
-            )
-        });
+        const navLinksSlide = e(
+            'ul',
+            {
+                className: 'sidenav',
+                id: 'slide-out'
+            },
+            navLinks
+        );
 
         return e(
             'nav',

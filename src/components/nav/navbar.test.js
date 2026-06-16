@@ -37,8 +37,8 @@ describe('Navbar', () => {
     );
     // The menu trigger always has its own <i>, so scope to the link anchors.
     expect(container.querySelector('li a i')).toBeNull();
-    // Link text is duplicated (top nav + sidenav), so expect at least one.
-    expect(screen.getAllByText('Plain').length).toBeGreaterThan(0);
+    // Link text appears once in the top nav and once in the sidenav.
+    expect(screen.getAllByText('Plain')).toHaveLength(2);
   });
 
   it('renders the menu trigger', () => {
@@ -48,12 +48,10 @@ describe('Navbar', () => {
     expect(trigger).toHaveAttribute('data-target', 'slide-out');
   });
 
-  it('renders exactly one sidenav menu', () => {
-    // Documents current behavior: navLinksSlide maps over `links`, so a
-    // sidenav <ul> is produced per link rather than a single one. With two
-    // links this currently yields two duplicate sidenav menus.
+  it('renders exactly one sidenav menu containing every link', () => {
     const { container } = render(<Navbar name="Site" links={links} />);
     const sidenavs = container.querySelectorAll('ul.sidenav#slide-out');
-    expect(sidenavs.length).toBe(links.length);
+    expect(sidenavs).toHaveLength(1);
+    expect(sidenavs[0].querySelectorAll('li')).toHaveLength(links.length);
   });
 });
