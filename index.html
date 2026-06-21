@@ -1,75 +1,146 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-    <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Theodore Konstantopoulos</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<title>Selected work — Theodore Konstantopoulos</title>
+<meta name="description" content="Selected work by Theodore Konstantopoulos — systems for markets, search, and the tooling around them.">
+<meta property="og:title" content="Selected work — Theodore Konstantopoulos">
+<meta property="og:description" content="Systems for markets, search, and the tooling around them.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230071e3'/><path d='M8 22 L14 14 L18 18 L24 9' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<style>
+  :root{
+    --bg:#0b0b0d; --text:#f5f5f7; --muted:#86868b; --faint:#56565a;
+    --line:rgba(255,255,255,.10); --line-hi:rgba(255,255,255,.24);
+    --chip:rgba(255,255,255,.06); --accent:#2997ff;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#fbfbfd; --text:#1d1d1f; --muted:#6e6e73; --faint:#a1a1a6;
+      --line:rgba(0,0,0,.10); --line-hi:rgba(0,0,0,.22);
+      --chip:rgba(0,0,0,.05); --accent:#0071e3;
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    text-rendering:optimizeLegibility; line-height:1.5;
+  }
+  a{color:inherit;text-decoration:none}
+  .bar{
+    display:flex; align-items:center; justify-content:space-between;
+    max-width:720px; margin:0 auto; padding:22px 24px;
+    font-size:14px;
+  }
+  .bar .home{ font-weight:500; letter-spacing:-.01em; display:inline-flex; gap:8px; align-items:baseline; }
+  .bar .home .chev{ color:var(--faint); }
+  .bar .gh{ color:var(--muted); transition:color .2s ease; }
+  .bar .home:hover, .bar .gh:hover{ color:var(--accent); }
+  main{ max-width:720px; margin:0 auto; padding:clamp(28px,8vh,72px) 24px 88px; }
+  .hero h1{ font-size:clamp(30px,5.5vw,42px); font-weight:600; letter-spacing:-.022em; line-height:1.05; }
+  .hero .lead{ margin-top:14px; font-size:clamp(16px,2.4vw,19px); color:var(--muted); max-width:42ch; }
+  .work{ list-style:none; margin-top:clamp(34px,6vh,56px); }
+  .proj{ padding:26px 0; border-top:1px solid var(--line); }
+  .proj:last-child{ border-bottom:1px solid var(--line); }
+  .phead{ display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; }
+  .pname{ font-size:21px; font-weight:600; letter-spacing:-.015em; }
+  .badge{
+    font-size:11px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
+    color:var(--accent); border:1px solid var(--accent); border-radius:999px;
+    padding:2px 9px; vertical-align:middle; opacity:.9;
+  }
+  .plink{ margin-left:auto; font-size:14px; font-weight:500; color:var(--accent); white-space:nowrap; }
+  .plink .arrow{ display:inline-block; transition:transform .25s ease; }
+  @media (hover:hover){ .plink:hover .arrow{ transform:translateX(4px); } }
+  .pdesc{ margin-top:12px; font-size:16px; color:var(--text); max-width:62ch; }
+  .ptech{ margin-top:14px; font-size:13px; color:var(--faint); letter-spacing:.01em; }
+  .more{ margin-top:40px; font-size:14px; color:var(--muted); max-width:62ch; }
+  .more a{ color:var(--accent); }
+  @media (prefers-reduced-motion: no-preference){
+    .rise{ opacity:0; transform:translateY(10px); animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    @keyframes rise{ to{ opacity:1; transform:none } }
+  }
+</style>
 </head>
-
 <body>
-  
-    <div class="navbar"
-        data-navbarid="1"
-        data-name="Theodore Konstantopoulos">
-        
-        <div class="navEntry"
-            data-url="/"
-            data-text="Portfolio"
-            data-icon="fas fa-suitcase"></div>
+  <div class="bar">
+    <a class="home" href="/"><span class="chev" aria-hidden="true">&larr;</span> Theodore Konstantopoulos</a>
+    <a class="gh" href="https://github.com/theoko" rel="me noopener">GitHub &#8599;</a>
+  </div>
 
-        <div class="navEntry"
-            data-url="https://github.com/theoko"
-            data-text="Github"
-            data-icon="fab fa-github"></div>
+  <main>
+    <div class="hero">
+      <h1 class="rise" style="animation-delay:.04s">Selected work</h1>
+      <p class="lead rise" style="animation-delay:.12s">A few systems I&rsquo;ve built &mdash; markets, search, and the tooling around them.</p>
     </div>
 
-    <div class="project" 
-        data-projectid="1" 
-        data-projectimage="images/tsearch_demo.png" 
-        data-projectheader="tSearch"
-        data-projectgit="https://gitlab.com/theoko/tsearch_public"
-        data-projectdescription="A web search engine written in Java and PHP. The project was divided into 2 separate projects: a multi-threaded crawler written in Java (using crawler4j - an open source web crawler for Java - https://gitlab.com/theoko/tsearch_jcrawler_public) and a web app written in PHP (using the Laravel Framework). The crawler collected URLs from Alexa, gathered information from each site and stored the information into Elasticsearch. The web application front end was designed using Materialize CSS."></div>
+    <ol class="work">
+      <li class="proj rise" style="animation-delay:.20s">
+        <div class="phead">
+          <span class="pname">tSearch</span>
+          <span class="badge">Live</span>
+          <a class="plink" href="https://gitlab.com/theoko/tsearch_jcrawler_public" rel="noopener">Source <span class="arrow" aria-hidden="true">&#8599;</span></a>
+        </div>
+        <p class="pdesc">My WPI capstone search engine, revived. The original was a multi-threaded Java crawler (crawler4j) feeding Elasticsearch behind a Laravel front end; the live revival is a static-first rebuild &mdash; a polite, robots-respecting crawler, hybrid tf-idf + LSA ranking with PageRank, an extractive RAG overview with citations, and an interactive knowledge graph with Louvain communities, zoom / pan, and fly-to-a-node search. You can query the in-browser index right now.</p>
+        <p class="ptech">Java / Laravel &middot; Python &middot; tf-idf + LSA + PageRank &middot; knowledge graph &middot; RAG</p>
+      </li>
 
-    <div class="project" 
-        data-projectid="2" 
-        data-projectimage="images/botnet_demo.png" 
-        data-projectheader="Botnet Demo with C&C (Command and Control)"
-        data-projectgit="https://github.com/theoko/P2P-Botnet"
-        data-projectdescription="A peer-to-peer (P2P) botnet demo. This project is part of CS 4404 (Tools and Techniques in Computer Network Security). It was tested using six virtual machines."></div>
+      <li class="proj rise" style="animation-delay:.28s">
+        <div class="phead">
+          <span class="pname">Argus</span>
+        </div>
+        <p class="pdesc">A manifest-driven reconnaissance engine &mdash; swap a TOML manifest, change the domain. Dependency-free Python built around a strict contract: every fetch is total (a 404 or timeout becomes a structured result, never a crash) and firewall-safe (a closed error vocabulary, nothing internal leaks). The open-web lane is SSRF-hardened &mdash; it refuses non-HTTP schemes and internal / loopback hosts on the initial URL and on every redirect, including alternate-encoded IPs &mdash; and a hard data firewall keeps every result host-local.</p>
+        <p class="ptech">Python (stdlib-only) &middot; manifest-driven &middot; SSRF-hardened &middot; data firewall &middot; TDD</p>
+      </li>
 
-    <div class="project" 
-        data-projectid="3" 
-        data-projectimage="images/python_server_demo.png" 
-        data-projectheader="HTTP client & server written in Python 2.7"
-        data-projectgit="https://github.com/theoko/cs3516-project1"
-        data-projectdescription="This program uses the python socket library to create an HTTP server to serve the contents of a directory and listen for connections on the port specified."></div>
+      <li class="proj rise" style="animation-delay:.36s">
+        <div class="phead">
+          <span class="pname">Greek Community Events</span>
+        </div>
+        <p class="pdesc">A dedicated search engine for community events, per city. A directory layer discovers and keeps up to date every community source &mdash; churches, associations, cultural orgs, venues, social accounts &mdash; for a given city; an aggregator then crawls them, extracting events from schema.org JSON-LD and iCalendar feeds into a re-runnable, bilingual calendar with a subscribable .ics. Social platforms sit behind a pluggable connector interface for the official APIs.</p>
+        <p class="ptech">Python &middot; BeautifulSoup &middot; schema.org JSON-LD / iCalendar &middot; ICS export &middot; bilingual</p>
+      </li>
 
-    <div class="project" 
-        data-projectid="4" 
-        data-projectimage="images/pdo_demo.png" 
-        data-projectheader="PDO Helpers"
-        data-projectgit="https://github.com/theoko/PDO_FUNCTIONS"
-        data-projectdescription="A PHP library for constructing MySQL queries. The library uses PDO to open a connection to the database server and provides useful methods for getting (or selecting), filtering, inserting and updating data."></div>
+      <li class="proj rise" style="animation-delay:.44s">
+        <div class="phead">
+          <span class="pname">Stock Trends</span>
+        </div>
+        <p class="pdesc">A market-intelligence platform: a fleet of Dockerized collectors &mdash; insider trades, U.S. congressional trades, lobbying, government contracts, whale activity, and options data &mdash; feeding MongoDB behind a Next.js dashboard that computes probability-of-profit for options strategies.</p>
+        <p class="ptech">Docker Compose &middot; MongoDB &middot; Next.js &middot; options analytics</p>
+      </li>
 
-    <script src="./dist/main.js"></script>
+      <li class="proj rise" style="animation-delay:.52s">
+        <div class="phead">
+          <span class="pname">0DTE Research Lab</span>
+        </div>
+        <p class="pdesc">A quantitative toolkit for same-day-expiration S&amp;P 500 options: intraday data pipelines (ThetaData, Interactive Brokers), event-driven backtesters sweeping parameters across 5+ years of 1-minute data, expectancy modeling, and a live signal engine with Telegram alerts.</p>
+        <p class="ptech">Python &middot; ThetaData &middot; Interactive Brokers &middot; backtesting</p>
+      </li>
 
+      <li class="proj rise" style="animation-delay:.60s">
+        <div class="phead">
+          <span class="pname">GetMyCoat</span>
+        </div>
+        <p class="pdesc">Digital coat-check for nightlife and events &mdash; a Laravel platform plus React Native apps (US and Greece editions) for QR-based cloakroom management: drop off, track, and retrieve items without paper tickets.</p>
+        <p class="ptech">Laravel &middot; React Native &middot; QR</p>
+      </li>
+
+      <li class="proj rise" style="animation-delay:.68s">
+        <div class="phead">
+          <span class="pname">Dev Env AI</span>
+        </div>
+        <p class="pdesc">A VS Code extension that sets up development environments by generating the right install commands for your stack &mdash; powered by a local LLM (Ollama + DeepSeek Coder), so it runs fully offline with nothing leaving your machine.</p>
+        <p class="ptech">VS Code &middot; Ollama &middot; DeepSeek Coder &middot; offline</p>
+      </li>
+    </ol>
+
+    <p class="more rise" style="animation-delay:.76s">Earlier coursework &mdash; a P2P botnet for a network-security course, an HTTP server in Python, and a PDO query builder &mdash; lives <a href="https://github.com/theoko" rel="noopener">on GitHub &#8599;</a>.</p>
+  </main>
 </body>
-
 </html>
